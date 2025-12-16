@@ -22,7 +22,7 @@ class NetworkModule {
     @Singleton
     fun provideBookApi(): BookApi{
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://openlibrary.org/swagger/docs/")
+            .baseUrl("https://openlibrary.org/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         return retrofit.create(BookApi::class.java)
